@@ -1,0 +1,29 @@
+<!-- test-images.html -->
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Test Images</h1>
+    
+    <h2>Local images:</h2>
+    <img src="images/logos/pulamed.png" style="width: 100px;"><br>
+    <img src="images/products/pulamed/executive.jpg" style="width: 300px;">
+    
+    <h2>Web images:</h2>
+    <img src="https://i.imgur.com/logo.png" style="width: 100px;"><br>
+    <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f" style="width: 300px;">
+    
+    <script>
+        // Test if images load
+        document.querySelectorAll('img').forEach(img => {
+            img.onerror = function() {
+                this.style.border = '5px solid red';
+                console.error('Failed to load:', this.src);
+            };
+            img.onload = function() {
+                this.style.border = '5px solid green';
+                console.log('Loaded:', this.src);
+            };
+        });
+    </script>
+</body>
+</html>
