@@ -3,8 +3,8 @@
 
 // ================= CONFIGURATION =================
 // CHANGE THESE 3 VALUES ONLY:
-const AIRTABLE_TOKEN = 'pat3O0ibg4EKppGFd.404fe41eea77ee6e66e2d8e72179250447c20021f4aed351a51134c04d6a4cdb';      // Your Personal Access Token
-const AIRTABLE_BASE_ID = 'appyCd1RKcaY8q1We';   // Your Base ID
+const AIRTABLE_TOKEN = '';      // Your Personal Access Token
+const AIRTABLE_BASE_ID = '';   // Your Base ID
 const AIRTABLE_TABLE = 'Products';              // Table name (must be "Products")
 
 // ================= DON'T TOUCH BELOW =================

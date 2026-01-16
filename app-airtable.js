@@ -1,6 +1,6 @@
 // app-airtable.js - SIMPLE WORKING VERSION
-const AIRTABLE_TOKEN = 'pat3O0ibg4EKppGFd.404fe41eea77ee6e66e2d8e72179250447c20021f4aed351a51134c04d6a4cdb';
-const AIRTABLE_BASE_ID = 'appyCd1RKcaY8q1We';
+const AIRTABLE_TOKEN = '';
+const AIRTABLE_BASE_ID = '';
 const AIRTABLE_TABLE = 'Products';
 
 let selectedProducts = new Set();
