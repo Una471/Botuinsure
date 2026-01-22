@@ -1,4 +1,4 @@
-/* BotsuInsure - Botswana Insurance Comparison */
+/* BotsuInsure - Botswana Insurance Comparison - MULTI-PAGE VERSION */
 :root {
     --primary-blue: #1e3c72;
     --secondary-blue: #2a5298;
@@ -63,8 +63,45 @@ body {
     color: rgba(255, 255, 255, 0.95);
 }
 
+/* ===== PAGE HEADER (Category Pages) ===== */
+.page-header {
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+    color: white;
+    padding: 80px 0 40px;
+    text-align: center;
+}
 
+.page-header h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
 
+.page-header .lead {
+    font-size: 1.3rem;
+    opacity: 0.9;
+}
+
+/* ===== BREADCRUMB NAVIGATION ===== */
+.breadcrumb-nav {
+    background: #f8f9fa;
+    padding: 15px 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.breadcrumb {
+    margin-bottom: 0;
+    background: transparent;
+}
+
+.breadcrumb-item a {
+    color: var(--primary-blue);
+    text-decoration: none;
+}
+
+.breadcrumb-item.active {
+    color: #6c757d;
+}
 
 /* ===== CATEGORY CARDS ===== */
 .category-card {
@@ -106,6 +143,24 @@ body {
     color: #666;
     font-size: 0.9rem;
     margin: 0;
+}
+
+/* ===== BACK TO HOME BUTTON ===== */
+.btn-back-home {
+    background: linear-gradient(135deg, #6c757d, #495057);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.btn-back-home:hover {
+    background: linear-gradient(135deg, #495057, #343a40);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(108, 117, 125, 0.4);
 }
 
 /* ===== PRODUCT CARDS - IMAGE DOMINANT DESIGN ===== */
@@ -255,6 +310,40 @@ body {
     margin-top: 3px;
 }
 
+/* ===== SIMPLE PRICE TIERS ===== */
+.price-tiers {
+    background: rgba(248, 249, 250, 0.8);
+    border-radius: 8px;
+    padding: 8px 12px;
+    border-left: 3px solid var(--accent-green);
+    font-size: 0.85rem;
+    margin-top: 8px;
+}
+
+.price-tiers div {
+    margin-bottom: 4px;
+    line-height: 1.3;
+}
+
+.price-tiers div:last-child {
+    margin-bottom: 0;
+}
+
+.price-tiers strong {
+    color: var(--primary-blue);
+}
+
+.price-notes {
+    color: #666;
+    font-style: italic;
+    background: rgba(255, 193, 7, 0.1);
+    padding: 5px 10px;
+    border-radius: 5px;
+    border-left: 2px solid #ffc107;
+    margin-top: 8px;
+    font-size: 0.85rem;
+}
+
 /* ===== PRODUCT FEATURES ===== */
 .product-features {
     margin: 10px 0;
@@ -356,6 +445,53 @@ body {
     background: rgba(255,255,255,0.2);
     color: white !important;
     font-weight: 600;
+}
+
+/* ===== MAIN NAVIGATION MENU ===== */
+.main-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.main-nav .nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 80px;
+    padding: 10px !important;
+    margin: 0 3px;
+    font-size: 0.8rem;
+}
+
+.main-nav .nav-link i {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+/* ===== DROPDOWN MENU FOR CATEGORIES ===== */
+.dropdown-menu {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    padding: 10px 0;
+}
+
+.dropdown-item {
+    padding: 10px 20px;
+    color: #333;
+    transition: all 0.3s;
+}
+
+.dropdown-item:hover {
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+    color: white;
+}
+
+.dropdown-item i {
+    width: 20px;
+    margin-right: 10px;
+    text-align: center;
 }
 
 /* ===== SALARY CALCULATOR ===== */
@@ -552,8 +688,6 @@ footer p {
     animation: fadeInUp 0.6s ease-out;
 }
 
-
-
 /* Fallback if hero image doesn't load */
 .hero:before {
     content: '';
@@ -612,6 +746,14 @@ footer p {
     
     .hero p {
         font-size: 1.1rem;
+    }
+    
+    .page-header {
+        padding: 60px 0 30px;
+    }
+    
+    .page-header h1 {
+        font-size: 2rem;
     }
     
     .category-card {
@@ -685,67 +827,105 @@ footer p {
     .modal-xl {
         max-width: 95%;
     }
-/* ===== FULL SITE BACKGROUND ===== */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: 
-        /* Dark overlay for readability */
-        linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.9)),
-        /* Your background image */
-        url('images/background/site-bg.jpg') center center fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: #333; /* Keep text dark for readability */
-    min-height: 100vh;
+    
+    /* Navigation adjustments for mobile */
+    .main-nav .nav-link {
+        min-width: 70px;
+        font-size: 0.7rem;
+        padding: 8px 5px !important;
+        margin: 0 2px;
+    }
+    
+    .main-nav .nav-link i {
+        font-size: 1rem;
+    }
 }
 
-/* Make all sections semi-transparent */
-section {
-    padding: 80px 0;
-    background: rgba(255, 255, 255, 0.92); /* Semi-transparent white */
-    backdrop-filter: blur(5px);
+/* ===== ENHANCED PRICE DISPLAY ===== */
+.price-tiers {
+    background: rgba(248, 249, 250, 0.8);
+    border-radius: 8px;
+    padding: 8px 12px;
+    border-left: 3px solid var(--accent-green);
+    font-size: 0.85rem;
 }
 
-/* Alternate sections slightly different */
-section:nth-child(even) {
-    background: rgba(255, 255, 255, 0.95);
+.price-tiers div {
+    margin-bottom: 4px;
 }
 
-/* Hero section - keep as is or adjust */
-.hero {
-    background: linear-gradient(rgba(26, 35, 126, 0.85), rgba(26, 35, 126, 0.9)), 
-                url('images/hero/hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    padding: 120px 0 80px;
+.price-tiers div:last-child {
+    margin-bottom: 0;
+}
+
+.price-tiers strong {
+    color: var(--primary-blue);
+}
+
+.price-notes {
+    color: #666;
+    font-style: italic;
+    background: rgba(255, 193, 7, 0.1);
+    padding: 5px 10px;
+    border-radius: 5px;
+    border-left: 2px solid #ffc107;
+}
+
+/* ===== NAVIGATION UPDATES ===== */
+/* Add smooth scrolling for dynamic sections */
+.nav-link[href^="#"] {
+    cursor: pointer;
+}
+
+/* ===== BETTER CATEGORY ICONS ===== */
+.category-card.medical i { color: #2196F3; }
+.category-card.life i { color: #4CAF50; }
+.category-card.funeral i { color: #9C27B0; }
+.category-card.hospital_cash i { color: #F44336; }
+.category-card.business_insurance i { color: #FF9800; }
+.category-card.workers_compensation i { color: #795548; }
+.category-card.public_liability i { color: #3F51B5; }
+.category-card.assets_insurance i { color: #009688; }
+.category-card.motor_insurance i { color: #673AB7; }
+.category-card.hospital_insurance i { color: #E91E63; }
+
+/* ===== EMPTY STATE STYLING ===== */
+.empty-state {
     text-align: center;
-    position: relative;
+    padding: 60px 20px;
 }
 
-/* Product cards - add transparency */
-.product-card {
-    border: none;
-    border-radius: 15px;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    height: 480px;
-    min-height: 480px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+.empty-state i {
+    font-size: 4rem;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+.empty-state h3 {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.empty-state p {
+    color: #999;
     margin-bottom: 30px;
-    background: rgba(255, 255, 255, 0.95); /* Semi-transparent */
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    display: flex;
-    flex-direction: column;
 }
 
-/* Footer */
-footer {
-    background: rgba(26, 35, 126, 0.9) !important;
+/* ===== VIEW ALL BUTTON ===== */
+.btn-view-all {
+    background: linear-gradient(135deg, #6f42c1, #6610f2);
     color: white;
-    padding: 60px 0 30px;
-    backdrop-filter: blur(5px);
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s;
 }
+
+.btn-view-all:hover {
+    background: linear-gradient(135deg, #6610f2, #5a0ed9);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(111, 66, 193, 0.4);
 }
+
