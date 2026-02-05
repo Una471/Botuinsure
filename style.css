@@ -558,9 +558,10 @@ section {
     padding: 80px 0;
 }
 
-section:nth-child(even) {
+/* Remove or comment out this rule */
+/* section:nth-child(even) {
     background: var(--light-bg);
-}
+} */
 
 .section-title {
     color: var(--primary-blue);

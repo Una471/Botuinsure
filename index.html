@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation with Dropdown Menu -->
+    <!-- Navigation with Personal & Business Dropdowns -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
         <div class="container">
             <a class="navbar-brand" href="index.html"><i class="fas fa-shield-alt"></i> BotsuInsure</a>
@@ -25,22 +25,26 @@
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="insuranceDropdown" role="button" data-bs-toggle="dropdown">
-                            <i class="fas fa-heartbeat"></i>
-                            <span>Insurance</span>
+                        <a class="nav-link dropdown-toggle" href="#" id="personalDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user"></i>
+                            <span>Personal Insurance</span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="medical.html"><i class="fas fa-heartbeat"></i> Medical Aid</a></li>
                             <li><a class="dropdown-item" href="life.html"><i class="fas fa-user-shield"></i> Life Insurance</a></li>
-                            <li><a class="dropdown-item" href="funeral.html"><i class="fas fa-cross"></i> Funeral Plans</a></li>
-                            <li><a class="dropdown-item" href="hospital-cash.html"><i class="fas fa-hospital"></i> Hospital Cash</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="business-insurance.html"><i class="fas fa-briefcase"></i> Business Insurance</a></li>
+                            <li><a class="dropdown-item" href="funeral.html"><i class="fas fa-cross"></i> Funeral Insurance</a></li>
+                            <li><a class="dropdown-item" href="medical.html"><i class="fas fa-heartbeat"></i> Medical Aid</a></li>
+                            <li><a class="dropdown-item" href="health.html"><i class="fas fa-stethoscope"></i> Health Insurance</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="businessDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Business Insurance</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="property.html"><i class="fas fa-warehouse"></i> Property Insurance</a></li>
+                            <li><a class="dropdown-item" href="liability.html"><i class="fas fa-users"></i> Liability Insurance</a></li>
                             <li><a class="dropdown-item" href="workers-compensation.html"><i class="fas fa-hard-hat"></i> Workers Compensation</a></li>
-                            <li><a class="dropdown-item" href="public-liability.html"><i class="fas fa-users"></i> Public Liability</a></li>
-                            <li><a class="dropdown-item" href="assets-insurance.html"><i class="fas fa-warehouse"></i> Assets Insurance</a></li>
-                            <li><a class="dropdown-item" href="motor-insurance.html"><i class="fas fa-car"></i> Motor Insurance</a></li>
-                            <li><a class="dropdown-item" href="hospital-insurance.html"><i class="fas fa-clinic-medical"></i> Hospital Insurance</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -64,86 +68,15 @@
         </nav>
     </div>
 
-    <!-- Hero Section with Image Background -->
+    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
                 <h1>Compare Botswana Insurance Plans</h1>
                 <p class="lead">Get the best insurance coverage from leading providers in Botswana</p>
-                <div class="row mt-5">
-                    <div class="col-md-3 col-6 mb-4">
-                        <a href="medical.html" class="category-link">
-                            <div class="category-card">
-                                <i class="fas fa-heartbeat"></i>
-                                <h5>Medical Aid</h5>
-                                <p>Comprehensive health coverage</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-3 col-6 mb-4">
-                        <a href="life.html" class="category-link">
-                            <div class="category-card">
-                                <i class="fas fa-user-shield"></i>
-                                <h5>Life Insurance</h5>
-                                <p>Life cover & protection</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-3 col-6 mb-4">
-                        <a href="funeral.html" class="category-link">
-                            <div class="category-card">
-                                <i class="fas fa-hands-helping"></i>
-                                <h5>Funeral Plans</h5>
-                                <p>Dignified funeral cover</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-3 col-6 mb-4">
-                        <a href="hospital-cash.html" class="category-link">
-                            <div class="category-card">
-                                <i class="fas fa-hospital"></i>
-                                <h5>Hospital Cash</h5>
-                                <p>Daily hospital benefits</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-3 col-6 mb-4">
-                        <a href="business-insurance.html" class="category-link">
-                            <div class="category-card">
-                                <i class="fas fa-briefcase"></i>
-                                <h5>Business Insurance</h5>
-                                <p>Protect your business</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-3 col-6 mb-4">
-                        <a href="workers-compensation.html" class="category-link">
-                            <div class="category-card">
-                                <i class="fas fa-hard-hat"></i>
-                                <h5>Workers Comp</h5>
-                                <p>Employee protection</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-3 col-6 mb-4">
-                        <a href="public-liability.html" class="category-link">
-                            <div class="category-card">
-                                <i class="fas fa-balance-scale"></i>
-                                <h5>Public Liability</h5>
-                                <p>Third-party protection</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-3 col-6 mb-4">
-                        <a href="motor-insurance.html" class="category-link">
-                            <div class="category-card">
-                                <i class="fas fa-car"></i>
-                                <h5>Motor Insurance</h5>
-                                <p>Vehicle coverage</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+                
+                <!-- Insurance categories will be loaded here by JavaScript -->
+                <div id="compare"></div>
             </div>
         </div>
     </section>
