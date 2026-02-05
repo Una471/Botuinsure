@@ -8,8 +8,5 @@
   },
   "engines": {
     "node": "24.x"
-  },
-  "scripts": {
-    "start": "node api/parse-insurance-pdf.js"
   }
 }
