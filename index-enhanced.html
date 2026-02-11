@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Compare the best insurance plans in Botswana. Life, Medical, Funeral, Property & Business Insurance from top providers.">
+    <meta name="keywords" content="insurance botswana, medical aid, life insurance, funeral plans, compare insurance">
+    <title>BotsuInsure - Compare Botswana Insurance Plans | Save Up to 40%</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
+    
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style-enhanced.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Page Loader -->
+    <div class="page-loader">
+        <div class="loader-content">
+            <div class="spinner"></div>
+            <h4>Loading BotsuInsure...</h4>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-shield-alt"></i> BotsuInsure
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto main-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="personalDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user"></i>
+                            <span>Personal</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="life.html"><i class="fas fa-user-shield"></i> Life Insurance</a></li>
+                            <li><a class="dropdown-item" href="funeral.html"><i class="fas fa-cross"></i> Funeral Insurance</a></li>
+                            <li><a class="dropdown-item" href="medical.html"><i class="fas fa-heartbeat"></i> Medical Aid</a></li>
+                            <li><a class="dropdown-item" href="health.html"><i class="fas fa-stethoscope"></i> Health Insurance</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="businessDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Business</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="property.html"><i class="fas fa-warehouse"></i> Property Insurance</a></li>
+                            <li><a class="dropdown-item" href="liability.html"><i class="fas fa-users"></i> Liability Insurance</a></li>
+                            <li><a class="dropdown-item" href="workers-compensation.html"><i class="fas fa-hard-hat"></i> Workers Compensation</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog-section">
+                            <i class="fas fa-newspaper"></i>
+                            <span>Blog</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showComparison()">
+                            <i class="fas fa-balance-scale"></i>
+                            <span>Compare</span>
+                            <span id="selectedCount" class="badge bg-danger ms-1">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Find Your Perfect Insurance Plan in Botswana</h1>
+                <p class="lead">Compare 50+ plans from leading insurers. Save up to 40% on premiums with instant quotes!</p>
+                
+                <!-- Quick Search -->
+                <div class="mt-4 mb-4">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="heroSearch" class="form-control" placeholder="Search life, medical, funeral insurance..." style="padding: 15px 50px; border-radius: 50px; border: none; font-size: 1.1rem;">
+                    </div>
+                </div>
+                
+                <!-- Stats -->
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Insurance Plans</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">7</span>
+                        <span class="stat-label">Top Providers</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">40%</span>
+                        <span class="stat-label">Average Savings</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust-section">
+        <div class="container">
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <i class="fas fa-shield-check"></i>
+                    <span>Licensed Insurers</span>
+                </div>
+                <div class="trust-badge">
+                    <i class="fas fa-lock"></i>
+                    <span>Secure & Private</span>
+                </div>
+                <div class="trust-badge">
+                    <i class="fas fa-clock"></i>
+                    <span>Instant Quotes</span>
+                </div>
+                <div class="trust-badge">
+                    <i class="fas fa-thumbs-up"></i>
+                    <span>Expert Guidance</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="section-header">
+                <h2>Browse Insurance Categories</h2>
+                <p>Find the perfect coverage for your needs</p>
+            </div>
+            <div id="compare"></div>
+        </div>
+    </section>
+
+    <!-- Ad Banner 1 -->
+    <section class="container my-5">
+        <div class="ad-banner">
+            <h3 style="color: #666; margin-bottom: 10px;">Featured Partner</h3>
+            <p style="color: #999;">Special offer: Get 3 months free on annual plans</p>
+            <!-- Replace with actual ad -->
+            <img src="https://via.placeholder.com/728x90/0066cc/ffffff?text=Advertisement+Space+Available" alt="Ad">
+        </div>
+    </section>
+
+    <!-- Featured Plans -->
+    <section class="py-5" style="background: linear-gradient(135deg, #f5f7fa, #c3cfe2);">
+        <div class="container">
+            <div class="section-header">
+                <h2>⭐ Featured Insurance Plans</h2>
+                <p>Top-rated plans recommended by experts</p>
+            </div>
+            <div id="featuredPlans" class="products-grid"></div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose BotsuInsure?</h2>
+                <p>Your trusted insurance comparison partner</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-3 col-sm-6">
+                    <div class="text-center p-4">
+                        <div class="mb-3" style="font-size: 3rem; color: var(--accent-green);">
+                            <i class="fas fa-search-dollar"></i>
+                        </div>
+                        <h5>Compare Easily</h5>
+                        <p class="text-muted">Side-by-side comparison of all major insurers in Botswana</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="text-center p-4">
+                        <div class="mb-3" style="font-size: 3rem; color: var(--primary-blue);">
+                            <i class="fas fa-piggy-bank"></i>
+                        </div>
+                        <h5>Save Money</h5>
+                        <p class="text-muted">Find the best rates and save up to 40% on premiums</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="text-center p-4">
+                        <div class="mb-3" style="font-size: 3rem; color: var(--warning-orange);">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <h5>Expert Advice</h5>
+                        <p class="text-muted">Free consultation to help you choose the right plan</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="text-center p-4">
+                        <div class="mb-3" style="font-size: 3rem; color: var(--danger-red);">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h5>Quick Process</h5>
+                        <p class="text-muted">Get quotes in minutes, not hours or days</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Customers Say</h2>
+                <p>Real reviews from real Batswana</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">TM</div>
+                        <div class="testimonial-info">
+                            <h4>Thabo Mogapi</h4>
+                            <p>Gaborone</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"BotsuInsure helped me find life insurance that's 30% cheaper than my old plan. The comparison tool is brilliant!"</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">NM</div>
+                        <div class="testimonial-info">
+                            <h4>Neo Moalosi</h4>
+                            <p>Francistown</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Finally, someone made insurance shopping easy! Got quotes from 5 different companies in one place. Highly recommend."</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">KS</div>
+                        <div class="testimonial-info">
+                            <h4>Keabetswe Seretse</h4>
+                            <p>Maun</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Great service! Found the perfect funeral plan for my family. The team was very helpful in explaining everything."</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">LT</div>
+                        <div class="testimonial-info">
+                            <h4>Lesego Tafa</h4>
+                            <p>Palapye</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Saved me so much time! Instead of calling multiple insurers, I compared all medical aid plans in 10 minutes."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog-section" id="blog-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>📰 Insurance Tips & Guides</h2>
+                <p>Expert advice to help you make informed decisions</p>
+            </div>
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800')">
+                        <div class="blog-category">Life Insurance</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> Jan 15, 2026</span>
+                            <span><i class="far fa-clock"></i> 5 min read</span>
+                        </div>
+                        <h3 class="blog-title">How Much Life Insurance Do You Really Need?</h3>
+                        <p class="blog-excerpt">Calculate the right amount of coverage to protect your family's financial future in Botswana...</p>
+                        <a href="blog/life-insurance-guide.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="blog-card">
+                    <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800')">
+                        <div class="blog-category">Medical Aid</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> Jan 10, 2026</span>
+                            <span><i class="far fa-clock"></i> 7 min read</span>
+                        </div>
+                        <h3 class="blog-title">Medical Aid vs Health Insurance: What's the Difference?</h3>
+                        <p class="blog-excerpt">Understanding the key differences between medical aid schemes and health insurance in Botswana...</p>
+                        <a href="blog/medical-aid-vs-health.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="blog-card">
+                    <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800')">
+                        <div class="blog-category">Business</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> Jan 5, 2026</span>
+                            <span><i class="far fa-clock"></i> 6 min read</span>
+                        </div>
+                        <h3 class="blog-title">Essential Insurance for Small Businesses in Botswana</h3>
+                        <p class="blog-excerpt">Protect your business with the right insurance coverage. Here's what every entrepreneur needs...</p>
+                        <a href="blog/business-insurance-guide.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ad Banner 2 -->
+    <section class="container my-5">
+        <div class="ad-banner">
+            <h3 style="color: #666; margin-bottom: 10px;">Sponsored Content</h3>
+            <p style="color: #999;">Exclusive deals for BotsuInsure visitors</p>
+            <!-- Replace with actual ad -->
+            <img src="https://via.placeholder.com/970x90/00c853/ffffff?text=Advertisement+Banner" alt="Ad">
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5" style="background: linear-gradient(135deg, var(--primary-blue), var(--primary-dark)); color: white;">
+        <div class="container text-center">
+            <h2 class="mb-4">Ready to Find Your Perfect Insurance Plan?</h2>
+            <p class="lead mb-4">Join thousands of Batswana who have saved money with BotsuInsure</p>
+            <div class="d-flex gap-3 justify-content-center flex-wrap">
+                <button class="btn btn-light btn-lg" onclick="document.getElementById('compare').scrollIntoView({behavior: 'smooth'})">
+                    <i class="fas fa-search"></i> Start Comparing
+                </button>
+                <button class="btn btn-outline-light btn-lg" onclick="window.open('https://wa.me/26771234567', '_blank')">
+                    <i class="fab fa-whatsapp"></i> Get Free Consultation
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h5>BotsuInsure</h5>
+                    <p>Botswana's #1 insurance comparison platform. Compare, save, and protect what matters most.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="life.html"><i class="fas fa-chevron-right"></i> Life Insurance</a></li>
+                        <li><a href="medical.html"><i class="fas fa-chevron-right"></i> Medical Aid</a></li>
+                        <li><a href="funeral.html"><i class="fas fa-chevron-right"></i> Funeral Plans</a></li>
+                        <li><a href="property.html"><i class="fas fa-chevron-right"></i> Property Insurance</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h5>Company</h5>
+                    <ul class="footer-links">
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="blog/"><i class="fas fa-chevron-right"></i> Blog</a></li>
+                        <li><a href="partners.html"><i class="fas fa-chevron-right"></i> Our Partners</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h5>Newsletter</h5>
+                    <p>Get insurance tips and exclusive offers</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thanks for subscribing!');">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                    <p class="mt-3" style="font-size: 0.9rem;">
+                        <i class="fas fa-phone"></i> +267 71 234 567<br>
+                        <i class="fas fa-envelope"></i> info@botsuinsure.co.bw
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 BotsuInsure. All rights reserved. | 
+                   <a href="privacy.html" style="color: inherit;">Privacy Policy</a> | 
+                   <a href="terms.html" style="color: inherit;">Terms of Service</a>
+                </p>
+                <p class="small mt-2">BotsuInsure is a licensed insurance broker in Botswana. All insurance products from licensed insurers.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div class="modal fade" id="compareModal">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Compare Insurance Plans</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="comparisonTable"></div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="leadModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Get Your Free Quote</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3 p-3" style="background: #f5f7fa; border-radius: 10px;">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <i class="fas fa-file-contract" style="color: var(--primary-blue);"></i>
+                            <strong id="selectedProductName">Product Name</strong>
+                        </div>
+                        <small class="text-muted" id="selectedProductCompany">Company Name</small>
+                    </div>
+                    
+                    <form id="leadForm">
+                        <input type="hidden" id="selectedProductId">
+                        <div class="mb-3">
+                            <label class="form-label">Full Name *</label>
+                            <input type="text" class="form-control" id="leadName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Phone Number *</label>
+                            <input type="tel" class="form-control" id="leadPhone" placeholder="+267 71 234 567" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email Address *</label>
+                            <input type="email" class="form-control" id="leadEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Additional Notes (Optional)</label>
+                            <textarea class="form-control" id="leadNotes" rows="3" placeholder="Any specific questions or requirements..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">
+                            <i class="fas fa-paper-plane"></i> Submit Quote Request
+                        </button>
+                    </form>
+                    
+                    <p class="text-muted small mt-3 mb-0">
+                        <i class="fas fa-lock"></i> Your information is secure and will only be shared with the selected insurer.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app-enhanced.js"></script>
+    
+    <!-- Optional: Google Analytics -->
+    <script>
+        // Add your Google Analytics code here
+    </script>
+</body>
+</html>
